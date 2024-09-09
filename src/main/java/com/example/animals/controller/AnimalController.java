@@ -6,6 +6,7 @@ import com.example.animals.model.command.CreateAnimalCommand;
 import com.example.animals.model.command.UpdateAnimalCommand;
 import com.example.animals.model.dto.AnimalDto;
 import com.example.animals.service.AnimalService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -44,7 +45,7 @@ public class AnimalController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public AnimalDto create(@RequestBody CreateAnimalCommand createAnimalCommand) {
+    public AnimalDto create(@Valid @RequestBody CreateAnimalCommand createAnimalCommand) {
         return animalToDtoMapper.convertToDto(animalService.create(createAnimalCommand));
     }
 
