@@ -7,13 +7,13 @@
 
     <changeSet id="1" author="mikolajKubinski">
         <createTable tableName="animal">
-            <column name="id" type="BIGINT" autoIncrement="true">
+            <column name="id" type="uuid">
                 <constraints primaryKey="true"/>
             </column>
-            <column name="size" type="varchar(255)">
+            <column name="animal_size" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
-            <column name="givenName" type="varchar(255)">
+            <column name="given_name" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
         </createTable>

@@ -1,6 +1,7 @@
 package com.example.animals.model;
 
 import com.example.animals.model.types.AnimalSize;
+import com.example.animals.validation.annotation.NameValidation;
 import jakarta.persistence.*;
 import lombok.Generated;
 import lombok.Getter;
